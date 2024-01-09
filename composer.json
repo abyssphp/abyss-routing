@@ -1,11 +1,11 @@
 {
-    "name": "abyss/routing",
+    "name": "abyss/abyss-routing",
     "description": "Routing Component",
-    "license": "LGPL-2.0-only",
+    "license": "MIT",
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Abyss\\Routing\\": "src/Routing/"
+            "Abyss\\Routing\\": "src/"
         }
     },
     "autoload-dev": {

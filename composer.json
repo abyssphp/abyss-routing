@@ -2,6 +2,22 @@
     "name": "abyss/abyss-routing",
     "description": "Routing Component",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Dominik Szamburski",
+            "email": "dominikszamburski99@gmail.com"
+        }
+    ],
+    "require": {
+        "psr/container": "^2.0",
+        "psr/http-message": "^2.0"
+    },
+    "require-dev": {
+        "abyss/coding-standard": "^1.1.x-dev",
+        "laminas/laminas-diactoros": "^3.3",
+        "phpunit/phpunit": "^10.5-dev",
+        "vimeo/psalm": "^5.x-dev"
+    },
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
@@ -13,46 +29,15 @@
             "Abyss\\Tests\\": "tests/"
         }
     },
-    "authors": [
-        {
-            "name": "Dominik Szamburski",
-            "email": "dominikszamburski99@gmail.com"
-        }
-    ],
-    "require-dev": {
-        "nulldark/devtools": "dev-master",
-        "laminas/laminas-diactoros": "^3.3"
-    },
-    "require": {
-        "psr/container": "^2.0",
-        "psr/http-message": "^2.0"
-    },
-    "scripts": {
-        "analyze:md": "phpmd src/ xml phpmd.xml",
-        "analyze:phpstan": "phpstan analyze --ansi",
-        "analyze:psalm": "psalm",
-        "build:clean": "git clean -fX build/.",
-        "build:clean:cache": "git clone -fX build/cache/.",
-        "build:clean:coverage": "git clone -fX build/coverage/.",
-        "checks": [
-            "@lint:check",
-            "@analyze:psalm",
-            "@analyze:phpstan",
-            "@test:unit",
-            "@test:coverage:html"
-        ],
-        "lint:style": "phpcs --colors --cache=build/cache/phpcs.cache",
-        "lint:fix": "phpcbf --cache=build/cache/phpcs.cache",
-        "lint:syntax": "parallel-lint --colors src tests",
-        "test:units": "phpunit --colors=always",
-        "test:coverage:ci": "phpunit --colors=always --coverage-text --coverage-xml ./build/coverage/xml tests",
-        "test:coverage:html": "phpunit --colors=always --coverage-html ./build/coverage/html tests"
-    },
     "config": {
         "allow-plugins": {
-            "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "nulldark/devtools": true
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
+    },
+    "scripts": {
+        "lint-check": "phpcs",
+        "lint-fix": "phpcbf",
+        "tests": "phpunit --colors=always",
+        "static-analysis" : "psalm --shepherd --stats"
     }
 }

@@ -1,11 +1,8 @@
-## IDE
- .idea/
- .vscode/
-
-## Composer
+composer.lock
 vendor/
 
-## QA Tools
-phpcs.xml
-phpstan.neon
 phpunit.xml
+phpcs.xml
+
+.phpunit.cache
+.phpcs-cache

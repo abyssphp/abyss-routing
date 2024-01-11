@@ -2,20 +2,26 @@
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
          bootstrap="vendor/autoload.php"
-         cacheDirectory="build/cache/phpunit"
+         colors="true"
+         cacheDirectory=".phpunit.cache"
          executionOrder="depends,defects"
          requireCoverageMetadata="true"
          beStrictAboutCoverageMetadata="true"
          beStrictAboutOutputDuringTests="true"
          failOnRisky="true"
          failOnWarning="true"
-         colors="true"
 >
     <coverage/>
 
     <testsuites>
-        <testsuite name="units">
-            <directory>tests/Units/</directory>
+        <testsuite name="unit test">
+            <directory>./tests/unit</directory>
+        </testsuite>
+        <testsuite name="integration test">
+            <directory>./tests/integration</directory>
+        </testsuite>
+        <testsuite name="performance test">
+            <directory>./tests/performance</directory>
         </testsuite>
     </testsuites>
 

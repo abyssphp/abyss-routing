@@ -21,7 +21,9 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Abyss\\Tests\\": "tests/"
+            "Abyss\\Test\\Integration\\": "tests/integration/",
+            "Abyss\\Test\\Performance\\": "tests/performance/",
+            "Abyss\\Test\\Unit\\": "tests/unit/"
         }
     },
     "config": {
@@ -32,7 +34,7 @@
     "scripts": {
         "lint-check": "phpcs",
         "lint-fix": "phpcbf",
-        "tests": "phpunit --colors=always",
-        "static-analysis" : "psalm --shepherd --stats"
+        "static-analysis": "psalm --shepherd --stats",
+        "tests": "phpunit --colors=always"
     }
 }

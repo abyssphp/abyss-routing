@@ -1,4 +1,4 @@
-# abyss/routing
+# charonlab/charon-routing
 
 Routing library inspired by express.js
 
@@ -7,7 +7,7 @@ Routing library inspired by express.js
 It's recommended that you use [Composer](https://getcomposer.org/)
 
 ```bash
-$ composer require abyss/routing
+$ composer require charonlab/charon-routing
 ```
 
 ## Choose a PSR-7 Implementation
@@ -28,7 +28,7 @@ $request = new ServerRequest();
 $router = new Router();
 $router->get('/', fn () => Response(200));
 
-/** @var \Abyss\Routing\Route $results */
+/** @var \Charon\Routing\Route $results */
 $results = $router->match($request);
 ```
 

@@ -1,22 +1,22 @@
 <?php
 
 /*
- * This file is part of the abyss/abyss-routing.
+ * This file is part of the charonlab/charon-routing.
  *
- * Copyright (C) 2023-2024 Abyss Development Team
+ * Copyright (C) 2023-2024 Charon Lab Development Team
  *
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE.md file for details.
  */
 
-namespace Abyss\Routing\Dispatcher;
+namespace Charon\Routing\Dispatcher;
 
-use Abyss\Routing\Exception\MethodNotAllowedException;
-use Abyss\Routing\Exception\RouteNotFoundException;
-use Abyss\Routing\Matcher\MethodMatcher;
-use Abyss\Routing\Matcher\UriMatcher;
-use Abyss\Routing\RouteCollectorInterface;
-use Abyss\Routing\RouteInterface;
+use Charon\Routing\Exception\MethodNotAllowedException;
+use Charon\Routing\Exception\RouteNotFoundException;
+use Charon\Routing\Matcher\MethodMatcher;
+use Charon\Routing\Matcher\UriMatcher;
+use Charon\Routing\RouteCollectorInterface;
+use Charon\Routing\RouteInterface;
 
 class RouteDispatcher implements RouteDispatcherInterface
 {
@@ -84,7 +84,7 @@ class RouteDispatcher implements RouteDispatcherInterface
      * @param string $uri
      * @param string $httpMethod
      *
-     * @return \Abyss\Routing\RouteInterface|null
+     * @return \Charon\Routing\RouteInterface|null
      *
      * @throws \Exception
      */
@@ -101,7 +101,7 @@ class RouteDispatcher implements RouteDispatcherInterface
     /**
      * Determines whether the specified route matches the passed parameters
      *
-     * @param \Abyss\Routing\RouteInterface $route
+     * @param \Charon\Routing\RouteInterface $route
      * @param string $uri
      * @param string $httpMethod
      *

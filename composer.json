@@ -1,5 +1,5 @@
 {
-    "name": "abyss/abyss-routing",
+    "name": "charonlab/charon-routing",
     "description": "Routing Component",
     "license": "MIT",
     "authors": [
@@ -9,21 +9,19 @@
         }
     ],
     "require-dev": {
-        "abyss/coding-standard": "^1.1.x-dev",
+        "charonlab/coding-standard": "^1.1.x-dev",
         "phpunit/phpunit": "^10.5-dev",
         "vimeo/psalm": "^5.x-dev"
     },
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Abyss\\Routing\\": "src/"
+            "Charon\\Routing\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Abyss\\Test\\Integration\\": "tests/integration/",
-            "Abyss\\Test\\Performance\\": "tests/performance/",
-            "Abyss\\Test\\Unit\\": "tests/unit/"
+            "Charon\\Test\\Unit\\": "tests/unit/"
         }
     },
     "config": {

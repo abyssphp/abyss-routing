@@ -1,15 +1,15 @@
 <?php
 
 /*
- * This file is part of the abyss/abyss-routing.
+ * This file is part of the charonlab/charon-routing.
  *
- * Copyright (C) 2023-2024 Abyss Development Team
+ * Copyright (C) 2023-2024 Charon Lab Development Team
  *
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE.md file for details.
  */
 
-namespace Abyss\Routing;
+namespace Charon\Routing;
 
 interface RouterInterface
 {
@@ -19,7 +19,7 @@ interface RouterInterface
      * @param string $uri
      * @param callable|string $callback
      *
-     * @return \Abyss\Routing\RouteInterface
+     * @return \Charon\Routing\RouteInterface
      */
     public function get(string $uri, callable|string $callback): RouteInterface;
 
@@ -29,7 +29,7 @@ interface RouterInterface
      * @param string $uri
      * @param callable|string $callback
      *
-     * @return \Abyss\Routing\RouteInterface
+     * @return \Charon\Routing\RouteInterface
      */
     public function post(string $uri, callable|string $callback): RouteInterface;
 
@@ -39,7 +39,7 @@ interface RouterInterface
      * @param string $uri
      * @param callable|string $callback
      *
-     * @return \Abyss\Routing\RouteInterface
+     * @return \Charon\Routing\RouteInterface
      */
     public function put(string $uri, callable|string $callback): RouteInterface;
 
@@ -49,7 +49,7 @@ interface RouterInterface
      * @param string $uri
      * @param callable|string $callback
      *
-     * @return \Abyss\Routing\RouteInterface
+     * @return \Charon\Routing\RouteInterface
      */
     public function patch(string $uri, callable|string $callback): RouteInterface;
 
@@ -59,7 +59,7 @@ interface RouterInterface
      * @param string $uri
      * @param callable|string $callback
      *
-     * @return \Abyss\Routing\RouteInterface
+     * @return \Charon\Routing\RouteInterface
      */
     public function delete(string $uri, callable|string $callback): RouteInterface;
 
@@ -69,7 +69,7 @@ interface RouterInterface
      * @param string $uri
      * @param callable|string $callback
      *
-     * @return \Abyss\Routing\RouteInterface
+     * @return \Charon\Routing\RouteInterface
      */
     public function head(string $uri, callable|string $callback): RouteInterface;
 
@@ -79,7 +79,7 @@ interface RouterInterface
      * @param string $uri
      * @param callable|string $callback
      *
-     * @return \Abyss\Routing\RouteInterface
+     * @return \Charon\Routing\RouteInterface
      */
     public function options(string $uri, callable|string $callback): RouteInterface;
 
@@ -89,7 +89,7 @@ interface RouterInterface
      * @param string $uri
      * @param callable|string $callback
      *
-     * @return \Abyss\Routing\RouteInterface
+     * @return \Charon\Routing\RouteInterface
      */
     public function any(string $uri, callable|string $callback): RouteInterface;
 
@@ -100,7 +100,7 @@ interface RouterInterface
      * @param string $uri
      * @param callable|string $callback
      *
-     * @return \Abyss\Routing\RouteInterface
+     * @return \Charon\Routing\RouteInterface
      */
     public function addRoute(array $methods, string $uri, callable|string $callback): RouteInterface;
 
@@ -110,7 +110,7 @@ interface RouterInterface
      * @param string $uri
      * @param string $httpMethod
      *
-     * @return \Abyss\Routing\RouteInterface
+     * @return \Charon\Routing\RouteInterface
      */
     public function dispatch(string $uri, string $httpMethod): RouteInterface;
 }

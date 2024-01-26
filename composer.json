@@ -35,6 +35,6 @@
         "lint-check": "phpcs",
         "lint-fix": "phpcbf",
         "static-analysis": "psalm --shepherd --stats",
-        "tests": "phpunit --colors=always"
+        "test": "phpunit --colors=always"
     }
 }

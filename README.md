@@ -1,34 +1,21 @@
 # charonlab/charon-routing
 
-Routing library inspired by express.js
+[![Build Status](https://github.com/charonlab/charon-container/workflows/Continuous%20Integration/badge.svg)](https://github.com/charonlab/charon-container/actions?query=workflow%3A"Continuous+Integration")
+
+A flexible lightweight routing library.
 
 ## Installation
 
-It's recommended that you use [Composer](https://getcomposer.org/)
+Run the following to install this library:
 
 ```bash
 $ composer require charonlab/charon-routing
 ```
 
-## Choose a PSR-7 Implementation
+## Support
 
-Before use the these lib you will need to choose a PSR-7 implementation.
-- [Nyholm/psr7](https://github.com/Nyholm/psr7) & [Nyholm/psr7-server](https://github.com/Nyholm/psr7-server)
-- [Guzzle/psr7](https://github.com/guzzle/psr7)
-- [laminas-diactoros](https://github.com/laminas/laminas-diactoros)
+- [Issues](https://github.com/charonlab/charon-routing/issues/)
 
-## Examples
+## License
 
-Below is the pseudocode for using the library.
-
-```php
-/** @var \Psr\Http\Message\ServerRequestInterface $request */
-$request = new ServerRequest();
-
-$router = new Router();
-$router->get('/', fn () => Response(200));
-
-/** @var \Charon\Routing\Route $results */
-$results = $router->match($request);
-```
-
+The charon-routing is open-sourced software licensed under the [MIT](LICENSE.md)

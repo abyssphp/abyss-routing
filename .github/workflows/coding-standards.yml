@@ -2,12 +2,16 @@ name: "Coding Standards"
 
 on:
   pull_request:
+    branches:
+      - "*.x"
     paths:
       - composer.*
       - phpcs.xml.dist
       - src/**
       - tests/**
   push:
+    branches:
+      - "*.x"
     paths:
       - composer.*
       - phpcs.xml.dist
@@ -38,4 +42,4 @@ jobs:
         uses: ramsey/composer-install@v2
 
       - name: Coding standards
-        run: "composer run lint:check -- -q --no-colors --report=checkstyle | cs2pr"
+        run: "composer run lint-check -- -q --no-colors --report=checkstyle | cs2pr"

@@ -3,7 +3,7 @@ name: "Continuous Integration"
 on:
   pull_request:
     branches:
-      - "*.*.x"
+      - "*.x"
     paths:
       - .github/workflows/continuous-integration.yml
       - composer.*
@@ -12,7 +12,7 @@ on:
       - phpunit.xml.dist
   push:
     branches:
-      - "*.*.x"
+      - "*.x"
     paths:
       - .github/workflows/continuous-integration.yml
       - composer.*
@@ -32,7 +32,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: ${{ matrix.operating-system }}
+    runs-on: "ubuntu-latest"
     strategy:
       matrix:
         php-versions: [ '8.2', '8.3' ]
@@ -47,11 +47,13 @@ jobs:
         with:
           coverage: none
           php-version: '8.2'
+          tools: cs2pr
+
       - name: Install dependencies
         uses: ramsey/composer-install@v2
 
       - name: Coding standards
-        run: "composer run lint:check -- -q --no-colors --report=checkstyle | cs2pr"
+        run: "composer run lint-check -- -q --no-colors --report=checkstyle | cs2pr"
 
       - name: Static Analysis
         run: "composer run static-analysis"

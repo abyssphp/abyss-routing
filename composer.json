@@ -1,13 +1,7 @@
 {
     "name": "charonlab/charon-routing",
-    "description": "Routing Component",
+    "description": "A flexible lightweight routing library.",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Dominik Szamburski",
-            "email": "dominikszamburski99@gmail.com"
-        }
-    ],
     "require-dev": {
         "charonlab/coding-standard": "^1.1.x-dev",
         "phpunit/phpunit": "^10.5-dev",
@@ -27,7 +21,12 @@
     "config": {
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
-        }
+        },
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "8.2.15"
+        },
+        "sort-packages": true
     },
     "scripts": {
         "lint-check": "phpcs",

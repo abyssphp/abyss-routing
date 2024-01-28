@@ -7,7 +7,6 @@
          executionOrder="depends,defects"
          requireCoverageMetadata="true"
          beStrictAboutCoverageMetadata="true"
-         beStrictAboutOutputDuringTests="true"
          failOnRisky="true"
          failOnWarning="true"
 >

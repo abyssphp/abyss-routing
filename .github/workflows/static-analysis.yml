@@ -2,16 +2,22 @@ name: "Static Analysis"
 
 on:
   pull_request:
+    branches:
+      - "*.x"
     paths:
       - composer.*
       - psalm*
       - src/**
+      - tests/**
 
   push:
+    branches:
+      - "*.x"
     paths:
       - composer.*
       - psalm*
       - src/**
+      - tests/**
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

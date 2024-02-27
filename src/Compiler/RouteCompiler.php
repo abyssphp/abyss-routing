@@ -62,7 +62,7 @@ class RouteCompiler implements RouteCompilerInterface
         }, $pattern);
 
         return new CompiledRoute(
-            '#^' . $regex . '$#sD',
+            '#^' . ($regex ?? '') . '$#sD',
             $variables
         );
     }

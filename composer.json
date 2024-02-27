@@ -5,7 +5,7 @@
     "require-dev": {
         "charonlab/coding-standard": "^1.1.x-dev",
         "phpunit/phpunit": "^10.5-dev",
-        "vimeo/psalm": "^5.x-dev"
+        "vimeo/psalm": "^6.x-dev"
     },
     "minimum-stability": "dev",
     "autoload": {
